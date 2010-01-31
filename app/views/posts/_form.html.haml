@@ -7,3 +7,14 @@
     = form.input :categoria
   - form.buttons do
     = form.commit_button "Submit"
+
+
+%script{ :type => "text/javascript" }
+
+  wmd_options = {
+  output: "Markdown",
+  lineLength: 80,
+  buttons: "bold italic | link blockquote code image | ol ul hr",
+  autostart: true
+  }
+%script{ :type => "text/javascript", :src => "/javascripts/wmd/wmd.js" }

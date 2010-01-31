@@ -5,11 +5,18 @@ RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
+require 'coderay'               # get one of supported highlighters 
+require 'rack/codehighlighter'
 
 Rails::Initializer.run do |config|
+  
+  config.gem "pandoku"
+  #config.gem "maruku"
+  config.gem 'vestal_versions'
+    
   config.gem 'warden', :version => '0.6.5'
   config.gem 'devise', :version => '0.7.0'
-  config.gem 'rails-footnotes', :version => '3.6.3'
+  #config.gem 'rails-footnotes', :version => '3.6.3'
   config.gem "haml", :version => "= 2.2.15"
   config.gem 'mislav-will_paginate', :version => '~> 2.3.11', :lib => 'will_paginate', 
     :source => 'http://gems.github.com'
@@ -27,4 +34,12 @@ Rails::Initializer.run do |config|
     #:user_name      => 'www',
     #:password       => 'secret'
   }
+
+  config.active_record.observers = :contacto_observer
+
+  config.gem 'coderay'
+  config.gem 'rack-codehighlighter'
+  config.middleware.use Rack::Codehighlighter, :coderay, :markdown => true,
+    :element => "pre>code", :pattern => /\A:::(\w+)\s*(\n|&#x000A;)/i, :logging => false
+
 end

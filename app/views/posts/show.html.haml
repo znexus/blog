@@ -1,24 +1,32 @@
-- title "Post"
+- title h @post.titulo
+- description h @post.resumen
 
-%p
-  %strong Titulo:
-  =h @post.titulo
-%p
-  %strong Resumen:
-  =h @post.resumen
-%p
-  %strong Texto:
-  =h @post.texto
-%p
-  %strong User:
-  =h @post.user
-%p
-  %strong Categoria:
-  =h @post.categoria
+= render :partial => 'posts/leyenda', :locals => {:post => @post} 
+  
+.entrada
 
-%p
-  = link_to "Edit", edit_user_post_path(@user,@post)
-  |
-  = link_to "Destroy", [@user,@post], :confirm => 'Are you sure?', :method => :delete
-  |
-  = link_to "View All", user_posts_path(@user)
+  %p{:class=>"resumen"}
+    = @post.resumen
+
+  = @post.texto_html
+
+  %p{:class=>"categoria"}
+    Dentro de
+    = h @post.categoria
+
+
+
+- if user_signed_in?
+  %p
+    %strong V# 
+    = @post.version
+    |
+    = link_to("Versión previa", user_post_path(@user,@post, :version => @post.version - 1)) if @post.version and @post.version > 1
+    |
+    = link_to("Última versión", user_post_path(@user,@post, :version => nil)) if params[:version]
+    |
+    = link_to "Edit", edit_user_post_path(@user,@post)
+    |
+    = link_to "Destroy", [@user,@post], :confirm => 'Are you sure?', :method => :delete
+    |
+    = link_to "View All", user_posts_path(@user)

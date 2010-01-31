@@ -22,6 +22,6 @@
     %p= f.label :nick, "Iniciales o nick"
     %p= f.text_field :nick
     = error_message_on @user, :nick
-    %p.submit= f.submit 'Cambiar clave'
+    %p.submit= f.submit 'Registrar'
 
 = link_to "Cancelar la cuenta", @user, :method => :delete, :confirm => "Borraré totalmente la cuenta. ¿Estás realmente seguro?"

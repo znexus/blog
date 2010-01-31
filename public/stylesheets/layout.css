@@ -1,22 +1,22 @@
 /*
 Sass::SyntaxError: Undefined variable: "!font_serif".
-on line 17 of /Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/layout.sass
+on line 32 of /Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/layout.sass
 
-13:     float: left
-14:     width: 50%
-15:     font-size: 2em
-16:     p
-17:       :font-family = !font_serif
-18:     .apa
-19:       font-size: 1.5em
-20:       color: #ddd
-21:     .slogan
-22:       font-size: 0.6em
-23:       font-style: italic
+28:     float: left
+29:     width: 50%
+30:     font-size: 2em
+31:     p
+32:       :font-family = !font_serif
+33:     .apa
+34:       font-size: 1.5em
+35:       color: #ddd
+36:     .slogan
+37:       font-size: 0.6em
+38:       font-style: italic
 
 
 Backtrace:
-/Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/layout.sass:17
+/Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/layout.sass:32
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/script/variable.rb:27:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/prop_node.rb:99:in `perform!'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/node.rb:181:in `_perform'
@@ -72,6 +72,7 @@ Backtrace:
 /usr/local/lib/ruby/gems/1.8/gems/warden-0.6.5/lib/warden/manager.rb:96:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/warden-0.6.5/lib/warden/manager.rb:95:in `catch'
 /usr/local/lib/ruby/gems/1.8/gems/warden-0.6.5/lib/warden/manager.rb:95:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-codehighlighter-0.4.1/lib/rack/codehighlighter.rb:25:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
@@ -111,4 +112,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined variable: \"!font_serif\".\A on line 17 of /Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/layout.sass\A \A 13:     float: left\A 14:     width: 50%\A 15:     font-size: 2em\A 16:     p\A 17:       :font-family = !font_serif\A 18:     .apa\A 19:       font-size: 1.5em\A 20:       color: #ddd\A 21:     .slogan\A 22:       font-size: 0.6em\A 23:       font-style: italic\A "; }
+  content: "Sass::SyntaxError: Undefined variable: \"!font_serif\".\A on line 32 of /Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/layout.sass\A \A 28:     float: left\A 29:     width: 50%\A 30:     font-size: 2em\A 31:     p\A 32:       :font-family = !font_serif\A 33:     .apa\A 34:       font-size: 1.5em\A 35:       color: #ddd\A 36:     .slogan\A 37:       font-size: 0.6em\A 38:       font-style: italic\A "; }

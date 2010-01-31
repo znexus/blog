@@ -1,21 +1,6 @@
-- title "Posts"
+- title 
+- description
+= will_paginate @posts
+= render :partial => 'post', :collection => @posts, :spacer_template => "layouts/divisor"
 
-%table
-  %tr
-    %th Titulo
-    %th Resumen
-    %th Texto
-    %th User
-    %th Categoria
-  - for post in @posts
-    %tr
-      %td= h post.titulo
-      %td= h post.resumen
-      %td= h post.texto
-      %td= h post.user_id
-      %td= h post.categoria_id
-      %td= link_to 'Show', [@user,post]
-      %td= link_to 'Edit', edit_user_post_path(@user,post)
-      %td= link_to 'Destroy', [@user,post], :confirm => 'Are you sure?', :method => :delete
 
-%p= link_to "New Post", new_user_post_path(@user)

@@ -1,0 +1,7 @@
+.entrada
+  %h2= link_to h( post.titulo), [@user,post]
+  = render :partial => 'posts/leyenda', :locals => {:post => post} 
+  
+  %p{:class=>"resumen"}
+    = link_to h(post.resumen), [@user,post]
+

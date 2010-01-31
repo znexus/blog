@@ -3,13 +3,22 @@ class Post < ActiveRecord::Base
   belongs_to :user
   belongs_to :categoria
   validates_presence_of :titulo, :texto
-  
+  versioned
+
+  def self.per_page
+    15
+  end
+    
   def to_s
     titulo
   end
 
   def to_param
     "#{id}-#{to_s.parameterize}"
+  end
+  
+  def texto_html
+    texto.pandoku(:markdown, :html)
   end
   
 end

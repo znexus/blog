@@ -1,0 +1,16 @@
+%p
+  Nuevo contacto
+%hr
+  = sanitize @record.texto 
+%hr
+%p
+  Autor: 
+  = "#{@record.nombre} <#{@record.email}>"
+%p
+  Creado: 
+  = @record.created_at
+%p
+  Modificado: 
+  = @record.updated_at
+%p
+  El robot de Cristiancastillo.com.

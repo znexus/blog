@@ -8,7 +8,7 @@
 
   %body
     #header
-      .contenido
+      .contenido_header
         #logo
           %p="cristian<span class='apa'>Castillo</span>"
           %p.slogan
@@ -34,13 +34,16 @@
 
         #derecha
           %p
-            Buscador (google)
+            Buscador (Google)
+
           %p
             Suscribirse
-          %p
-            Ultimas entradas
+
           %p 
             Categorías
+
+          = categorias
+
           %p
             Tags
         
@@ -51,6 +54,6 @@
       
     #footer
       .contenido
-        desarrollado por 
+        Desarrollado por 
         = link_to "Z-nexus", "http://z-nexus.com"
 

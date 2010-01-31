@@ -9,6 +9,9 @@ module LayoutHelper
       content_tag(:title, "#{page_title.to_s} | Cristiancastillo.com")
     }
     @show_title = show_title
+    if show_title?
+      content_for(:title){ page_title }
+    end
   end
   
   def show_title?
@@ -16,7 +19,7 @@ module LayoutHelper
   end
   
   def description( d= "Consultoría y desarrollo de aplicaciones WEB, estratégia de negocios WEB, 
-    marketing sobre WEB y temas relacionados con tecnologías de información y otras especias")
+    marketing sobre WEB y temas relacionados con tecnologías de información, marketing y redes sociales")
     content_for(:head) {
       tag(:meta, :name => "description" ,:content=>h(d) )
     }
@@ -42,5 +45,14 @@ module LayoutHelper
       t << tab.contacto( "Contacto", new_contacto_path)
     end
     t
+  end
+  
+  #entrega las categorías con entradas
+  def categorias
+    t = ""
+    Categoria.all(:order => "nombre", :conditions => "menu is false").each do |c|
+      t << content_tag(:li, link_to(c.nombre, [c.user, c]))
+    end
+    content_tag :ul, t, :id => "categorias"
   end
 end

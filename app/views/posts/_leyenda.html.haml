@@ -1,0 +1,7 @@
+%p{:class=>"leyenda"}
+  %em{:class=>"gris"} Del:
+  = l post.created_at, :format => "%d %B %Y"
+  %em{:class=>"gris"} por:
+  = h post.user
+  %em{:class=>"gris"} dentro de:
+  = h post.categoria

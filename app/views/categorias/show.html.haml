@@ -1,18 +1,11 @@
-- title "Categoria"
+- title "#{h @categoria.nombre}"
 
-%p
-  %strong Nombre:
-  =h @categoria.nombre
-%p
-  %strong ¿Va al menú?:
-  =h @categoria.menu
-%p
-  %strong User:
-  =h @categoria.user
+- if user_signed_in?
+  %p
+    = link_to "Edit", edit_user_categoria_path(@user,@categoria)
+    |
+    = link_to "Destroy", [@user,@categoria], :confirm => 'Are you sure?', :method => :delete
+    |
+    = link_to "View All", user_categorias_path(@user)
 
-%p
-  = link_to "Edit", edit_user_categoria_path(@user,@categoria)
-  |
-  = link_to "Destroy", [@user,@categoria], :confirm => 'Are you sure?', :method => :delete
-  |
-  = link_to "View All", user_categorias_path(@user)
+= render :partial => 'posts/post', :collection => @posts, :spacer_template => "layouts/divisor"

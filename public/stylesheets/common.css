@@ -22,7 +22,7 @@ body, ol, ul, li, dt, tt, label, input, select, textarea {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Lucida Grande, Lucida, Georgia, Times New Roman, Times, Serif;
-  padding: 0.9em 0 0.2em 0; }
+  padding: 0.9em 0 0.1em 0; }
 
 h1 {
   font-size: 2em; }
@@ -84,6 +84,12 @@ th {
 .izquierda {
   float: left;
   width: 50%; }
+
+.gris {
+  color: #666; }
+
+.divisor {
+  border-bottom: 1px solid #999; }
 
 #flash_notice,
 #flash_error,

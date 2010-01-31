@@ -1,5 +1,5 @@
 class ContactosController < ApplicationController
-  before_filter :autorizado?, :except => [:new, :create]
+  before_filter :autorizado?, :except => [:new, :create, :show]
   
   def index
     @contactos = Contacto.all
@@ -21,7 +21,7 @@ class ContactosController < ApplicationController
     @contacto = Contacto.new(params[:contacto])
     @contacto.user = current_user if user_signed_in?
     if @contacto.save
-      flash[:notice] = "Successfully created contacto."
+      flash[:notice] = "Se registró correctamente contacto."
       redirect_to @contacto
     else
       render :action => 'new'
@@ -35,7 +35,7 @@ class ContactosController < ApplicationController
   def update
     @contacto = Contacto.find(params[:id])
     if @contacto.update_attributes(params[:contacto])
-      flash[:notice] = "Successfully updated contacto."
+      flash[:notice] = "Se actualizó correctamente contacto."
       redirect_to @contacto
     else
       render :action => 'edit'

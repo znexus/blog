@@ -1,6 +1,6 @@
 class CategoriasController < ApplicationController
   before_filter :iniciar
-  before_filter :autorizado?, :only => [:create,:update,:destroy]
+  before_filter :autorizado?, :except => [:show,:index]
 
   def index
     @categorias = @user.categorias
@@ -8,6 +8,7 @@ class CategoriasController < ApplicationController
   
   def show
     @categoria = Categoria.find(params[:id])
+    @posts = @user.posts.all(:conditions=>"categoria_id = #{@categoria.id}")
   end
   
   def new
@@ -18,7 +19,7 @@ class CategoriasController < ApplicationController
     @categoria = Categoria.new(params[:categoria])
     @categoria.user = current_user
     if @categoria.save
-      flash[:notice] = "Successfully created categoria."
+      flash[:notice] = "Se registró correctamente categoria."
       redirect_to user_categorias_path(@user)
     else
       render :action => 'new'
@@ -32,7 +33,7 @@ class CategoriasController < ApplicationController
   def update
     @categoria = Categoria.find(params[:id])
     if @categoria.update_attributes(params[:categoria])
-      flash[:notice] = "Successfully updated categoria."
+      flash[:notice] = "Se actualizó correctamente categoria."
       redirect_to user_categorias_path(@user)
     else
       render :action => 'edit'
