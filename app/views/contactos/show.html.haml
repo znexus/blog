@@ -1,0 +1,21 @@
+- title "Contacto"
+
+%p
+  %strong Nombre:
+  =h @contacto.nombre
+%p
+  %strong Email:
+  =h @contacto.email
+%p
+  %strong Texto:
+  =h @contacto.texto
+%p
+  %strong User:
+  =h @contacto.user_id
+
+%p
+  = link_to "Edit", edit_contacto_path(@contacto)
+  |
+  = link_to "Destroy", @contacto, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", contactos_path

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100131131604) do
+ActiveRecord::Schema.define(:version => 20100131141150) do
 
   create_table "categorias", :force => true do |t|
     t.string   "nombre"
@@ -17,6 +17,15 @@ ActiveRecord::Schema.define(:version => 20100131131604) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "menu",       :default => false
+  end
+
+  create_table "contactos", :force => true do |t|
+    t.string   "nombre"
+    t.string   "email"
+    t.text     "texto"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "posts", :force => true do |t|

@@ -3,6 +3,8 @@ class Categoria < ActiveRecord::Base
   belongs_to :user
   has_many :posts
   
+  validates_presence_of :nombre
+  
   named_scope :menu,
     :conditions => "menu is true"
   

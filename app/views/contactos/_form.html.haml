@@ -1,0 +1,8 @@
+- semantic_form_for @contacto do |form|
+  = form.error_messages
+  - form.inputs do
+    = form.input :nombre
+    = form.input :email
+    = form.input :texto
+  - form.buttons do
+    = form.commit_button "Submit"

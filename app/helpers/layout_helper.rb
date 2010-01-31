@@ -39,7 +39,7 @@ module LayoutHelper
         t << eval("tab.#{c.nombre.parameterize("_")}(\"#{c.nombre}\", \"#{polymorphic_url([User.first,c])}\")")
       end
       
-      t << tab.contacto( "Contacto", root_path)
+      t << tab.contacto( "Contacto", new_contacto_path)
     end
     t
   end

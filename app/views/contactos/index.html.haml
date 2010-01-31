@@ -1,0 +1,19 @@
+- title "Contactos"
+
+%table
+  %tr
+    %th Nombre
+    %th Email
+    %th Texto
+    %th User
+  - for contacto in @contactos
+    %tr
+      %td= h contacto.nombre
+      %td= h contacto.email
+      %td= h contacto.texto
+      %td= h contacto.user_id
+      %td= link_to 'Show', contacto
+      %td= link_to 'Edit', edit_contacto_path(contacto)
+      %td= link_to 'Destroy', contacto, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Contacto", new_contacto_path

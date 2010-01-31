@@ -1,0 +1,11 @@
+one:
+  nombre: MyString
+  email: MyString
+  texto: MyText
+  user_id: 1
+
+two:
+  nombre: MyString
+  email: MyString
+  texto: MyText
+  user_id: 1
