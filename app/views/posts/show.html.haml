@@ -1,0 +1,24 @@
+- title "Post"
+
+%p
+  %strong Titulo:
+  =h @post.titulo
+%p
+  %strong Resumen:
+  =h @post.resumen
+%p
+  %strong Texto:
+  =h @post.texto
+%p
+  %strong User:
+  =h @post.user
+%p
+  %strong Categoria:
+  =h @post.categoria
+
+%p
+  = link_to "Edit", edit_user_post_path(@user,@post)
+  |
+  = link_to "Destroy", [@user,@post], :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", user_posts_path(@user)

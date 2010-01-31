@@ -1,0 +1,7 @@
+<h1>Hello!</h1>
+<% unless user_signed_in? -%>
+  <p><%= link_to 'Iniciar sesión', new_user_session_path %></p>
+  <p><%= link_to 'Registrarse', new_user_path %></p>
+<% end -%>
+
+<p>Hello World!</p>

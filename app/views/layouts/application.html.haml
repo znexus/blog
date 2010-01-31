@@ -1,0 +1,43 @@
+!!! Strict
+%html{html_attrs}
+
+  %head
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
+    = stylesheet_link_tag 'application'
+    = yield(:head)
+
+  %body
+    #header
+      .contenido
+        #logo
+          %p="cristian<span class='apa'>Castillo</span>"
+          %p.slogan
+            Consultor y desarrollador WEB
+        #user
+          .current_user
+            = render :partial => 'layouts/usuario'
+          #menu
+            - tabs({:always_link => true }) do |tab|
+              = tab.home "Home", root_path
+              = tab.home "Sobre mi", root_path
+              = tab.home "Portafolio", root_path
+              = tab.home "Contacto", root_path
+          .clear
+        .clear
+
+    #center
+      .contenido
+
+        - if show_title?
+          %h1= yield(:title)
+
+        - flash.each do |name, msg|
+          = content_tag :div, msg, :id => "flash_#{name}"
+
+        = yield
+
+    #footer
+      .contenido
+        desarrollado por 
+        = link_to "Z-nexus", "http://z-nexus.com"
+

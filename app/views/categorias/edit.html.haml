@@ -1,0 +1,8 @@
+- title "Edit Categoria"
+
+= render :partial => 'form'
+
+%p
+  = link_to "Show", [@user, @categoria]
+  |
+  = link_to "View All", user_categorias_path(@user)

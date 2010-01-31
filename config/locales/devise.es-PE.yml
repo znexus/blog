@@ -1,0 +1,19 @@
+es-PE:
+  devise:
+    sessions:
+      signed_in: 'Inició sesión correctamente.'
+      signed_out: 'Cerró la sesión correctamente.'
+      unauthenticated: 'Necesitas registrarte o iniciar sesión para continuar.'
+      unconfirmed: 'Debes confirmar tu cuenta antes de continuar.'
+      invalid: 'Clave o email inválido.'
+      timeout: 'Su sesión ha expirado, por favor inicie sesión para continuar.'
+    passwords:
+      send_instructions: 'Recibirá un email con instrucciones para establecer su clave en pocos minutos.'
+      updated: 'Su clave ha sido cambiada correctamente. Además has iniciado sesión correctamente.'
+    confirmations:
+      send_instructions: 'Recibirá un email con instrucciones para confirmar su cuenta en pocos minutos.'
+      confirmed: 'Su cuenta ha sido confirmada correctamente. Además ha iniciado sesión.'
+    mailer:
+      confirmation_instructions: 'Instrucciones para confirmar su cuenta'
+      reset_password_instructions: 'Instrucciones para establecer su clave'
+

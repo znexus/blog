@@ -1,0 +1,342 @@
+html, body {
+  background: #cccccc;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: 100%;
+  line-height: normal; }
+
+body, h1, h2, h3, h4, h5, h6, ol, p {
+  margin: 0;
+  padding: 0; }
+
+form {
+  margin: 0px; }
+
+
+body, ol, ul, li, dt, tt, label, input, select, textarea {
+  font-size: 13px;
+  font-family: helvetica, Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Lucida Grande, Lucida, Georgia, Times New Roman, Times, Serif;
+  padding: 0.9em 0 0.2em 0; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.6em; }
+
+h3 {
+  font-size: 1.3em; }
+
+h4 {
+  font-size: 1.1em; }
+
+h5 {
+  font-size: 0.9em; }
+
+p {
+  font-family: helvetica, Arial, sans-serif; }
+
+a {
+  text-decoration: none; }
+  a:link, a:visited {
+    color: #0033cc; }
+  a:hover {
+    text-decoration: underline; }
+  a img {
+    background-color: white;
+    border: none;
+    color: white;
+    text-decoration: none; }
+
+abbr {
+  font-size: 9px; }
+
+small {
+  font-size: 10px; }
+
+dt {
+  font-size: 11px; }
+
+tt {
+  font-size: 12px; }
+
+th {
+  background-color: #666;
+  color: #fff; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+.odd {
+  background-color: #ddd; }
+
+.even {
+  background-color: #fff; }
+
+.izquierda {
+  float: left;
+  width: 50%; }
+
+#flash_notice,
+#flash_error,
+#flash_success,
+#flash_failure {
+  padding: 5px 20px;
+  margin: 0; }
+
+#flash_notice,
+#flash_success {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+  background-image: url('/images/icons/tick.png');
+  background-repeat: no-repeat;
+  background-position: 0px 5px; }
+
+#flash_error,
+#flash_failure {
+  background-color: #FCC;
+  border: solid 1px #C66;
+  background-image: url('/images/icons/exclamation.png');
+  background-repeat: no-repeat;
+  background-position: 0px 5px; }
+
+.fieldWithErrors {
+  display: inline; }
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+  #errorExplanation h2 {
+    text-align: left;
+    padding: 5px 5px 5px 15px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #c00;
+    color: #fff; }
+  #errorExplanation p {
+    color: #333;
+    margin-bottom: 0;
+    padding: 8px; }
+  #errorExplanation ul {
+    margin: 2px 24px; }
+    #errorExplanation ul li {
+      font-size: 12px;
+      list-style: disc; }
+
+.contenido {
+  width: 90%;
+  margin: 0 auto; }
+
+#header {
+  padding-top: 10px;
+  background-color: #555;
+  color: white;
+  height: 87px; }
+  #header a {
+    color: white; }
+  #header #logo {
+    float: left;
+    width: 50%;
+    font-size: 2em; }
+    #header #logo p {
+      font-family: Lucida Grande, Lucida, Georgia, Times New Roman, Times, Serif; }
+    #header #logo .apa {
+      font-size: 1.5em;
+      color: #ddd; }
+    #header #logo .slogan {
+      font-size: 0.6em;
+      font-style: italic;
+      color: #ddd; }
+  #header #user {
+    float: right;
+    width: 50%;
+    font-size: 0.9em;
+    text-align: right; }
+    #header #user .current_user {
+      margin-right: 5px;
+      height: 20px; }
+
+#center {
+  background: #fff;
+  padding-bottom: 20px; }
+  #center p {
+    margin: 1em 0 0.5em 0; }
+
+#footer {
+  border-top: 10px solid #111;
+  padding-top: 10px;
+  background-color: #ccc; }
+
+#menu {
+  margin-top: 33px;
+  font-size: 93%;
+  line-height: normal;
+  height: 35px; }
+  #menu ul {
+    margin: 0;
+    padding: 10px 0 0 50px;
+    list-style: none;
+    text-align: right; }
+  #menu li {
+    display: inline;
+    margin: 0;
+    padding: 0; }
+  #menu li span span {
+    margin: 0 2px;
+    text-decoration: none; }
+  #menu a {
+    background-color: black;
+    color: white;
+    padding: 10px 20px; }
+    #menu a:hover {
+      color: #ff9834; }
+  #menu li.active span span a {
+    background-color: white;
+    color: black;
+    padding: 10px 20px; }
+    #menu li.active span span a:hover {
+      color: #ff9834; }
+
+form.formtastic {
+  margin: 0;
+  padding: 0; }
+  form.formtastic ul, form.formtastic ol, form.formtastic li, form.formtastic fieldset, form.formtastic legend, form.formtastic input, form.formtastic textarea, form.formtastic select, form.formtastic p {
+    margin: 0;
+    padding: 0; }
+  form.formtastic fieldset {
+    border: 0; }
+  form.formtastic em, form.formtastic strong {
+    font-style: normal;
+    font-weight: normal; }
+  form.formtastic ol, form.formtastic ul {
+    list-style: none; }
+  form.formtastic abbr, form.formtastic acronym {
+    border: 0;
+    font-variant: normal; }
+  form.formtastic input, form.formtastic textarea, form.formtastic select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit; }
+  form.formtastic input, form.formtastic textarea, form.formtastic select {
+    font-size: 100%; }
+  form.formtastic legend {
+    color: #000; }
+  form.formtastic fieldset {
+    display: inline-block; }
+    form.formtastic fieldset.buttons {
+      padding-left: 25%; }
+    form.formtastic fieldset.buttons li {
+      float: left;
+      padding-right: 0.5em; }
+    form.formtastic fieldset:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+
+html[xmlns] form.formtastic fieldset {
+  display: block; }
+
+* html form.formtastic fieldset {
+  height: 1%; }
+
+form.formtastic fieldset ol li {
+  margin-bottom: 1.5em;
+  display: inline-block; }
+  form.formtastic fieldset ol li:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+html[xmlns] form.formtastic fieldset ol li {
+  display: block; }
+
+* html form.formtastic fieldset ol li {
+  height: 1%; }
+
+form.formtastic fieldset ol li label {
+  display: block;
+  width: 25%;
+  float: left;
+  padding-top: .2em; }
+form.formtastic fieldset ol li li label {
+  line-height: 100%;
+  padding-top: 0; }
+  form.formtastic fieldset ol li li label input {
+    line-height: 100%;
+    vertical-align: middle;
+    margin-top: -0.1em; }
+form.formtastic fieldset ol li fieldset {
+  position: relative; }
+  form.formtastic fieldset ol li fieldset legend {
+    position: absolute;
+    width: 25%;
+    padding-top: 0.1em; }
+    form.formtastic fieldset ol li fieldset legend span {
+      position: absolute; }
+  form.formtastic fieldset ol li fieldset ol {
+    float: left;
+    width: 74%;
+    margin: 0;
+    padding: 0 0 0 25%; }
+    form.formtastic fieldset ol li fieldset ol li {
+      padding: 0;
+      border: 0; }
+form.formtastic fieldset ol li p.inline-hints {
+  color: #666;
+  margin: 0.5em 0 0 25%; }
+form.formtastic fieldset ol li p.inline-errors {
+  color: #cc0000;
+  margin: 0.5em 0 0 25%; }
+form.formtastic fieldset ol li ul.errors {
+  color: #cc0000;
+  margin: 0.5em 0 0 25%;
+  list-style: square; }
+  form.formtastic fieldset ol li ul.errors li {
+    padding: 0;
+    border: none;
+    display: list-item; }
+form.formtastic fieldset ol li.string input, form.formtastic fieldset ol li.password input, form.formtastic fieldset ol li.numeric input, form.formtastic fieldset ol li.text textarea {
+  width: 74%; }
+form.formtastic fieldset ol li.hidden {
+  display: none; }
+form.formtastic fieldset ol li.boolean label {
+  padding-left: 25%;
+  width: auto; }
+  form.formtastic fieldset ol li.boolean label input {
+    margin: 0 0.5em 0 0.2em; }
+form.formtastic fieldset ol li.radio fieldset ol, form.formtastic fieldset ol li.check_boxes fieldset ol {
+  margin-bottom: -0.6em; }
+  form.formtastic fieldset ol li.radio fieldset ol li, form.formtastic fieldset ol li.check_boxes fieldset ol li {
+    margin: 0.1em 0 0.5em 0; }
+    form.formtastic fieldset ol li.radio fieldset ol li label, form.formtastic fieldset ol li.check_boxes fieldset ol li label {
+      float: none;
+      width: 100%; }
+      form.formtastic fieldset ol li.radio fieldset ol li label input, form.formtastic fieldset ol li.check_boxes fieldset ol li label input {
+        margin-right: 0.2em; }
+form.formtastic fieldset ol li.date fieldset ol li, form.formtastic fieldset ol li.time fieldset ol li, form.formtastic fieldset ol li.datetime fieldset ol li {
+  float: left;
+  width: auto;
+  margin: 0 .3em 0 0; }
+form.formtastic fieldset ol li.date fieldset ol li label, form.formtastic fieldset ol li.time fieldset ol li label, form.formtastic fieldset ol li.datetime fieldset ol li label {
+  display: none; }
+form.formtastic fieldset ol li.date fieldset ol li label input, form.formtastic fieldset ol li.time fieldset ol li label input, form.formtastic fieldset ol li.datetime fieldset ol li label input {
+  display: inline;
+  margin: 0;
+  padding: 0; }

@@ -1,0 +1,16 @@
+log/*
+.git/*
+public/uploads/*
+#public/images/icons/*
+config/database.yml
+tmp/*
+public/javascripts/dhtml_calendar/*
+#public/javascripts/fckeditor/*
+public/stylesheets/dhtml_calendar/*
+public/system/*
+config/development.sphinx.conf
+config/production.sphinx.conf
+db/sphinx/
+db/repros/*
+xml/*
+rdoc/*

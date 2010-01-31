@@ -1,0 +1,13 @@
+one:
+  titulo: MyString
+  resumen: MyString
+  texto: MyText
+  user_id: 1
+  categoria_id: 1
+
+two:
+  titulo: MyString
+  resumen: MyString
+  texto: MyText
+  user_id: 1
+  categoria_id: 1

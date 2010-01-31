@@ -1,0 +1,164 @@
+
+!color_body                  = #ccc
+!color_link                  = #0033cc
+!color_link_image            = white
+!color_link_image_background = white
+!color_rojo_logo             = #e70e16
+!color_naranja_claro             = #FF9834
+!font_serif =  "Lucida Grande", "Lucida", "Georgia", "Times New Roman", Times, Serif
+//!font_sans_serif = "MS Trebuchet", Arial, sans-serif
+//!font_serif = "Lucida Grande", Geneva, Arial, Helvetica, sans-serif
+!font_sans_serif = helvetica, "Arial", sans-serif
+//!font_serif = "Lucida Grande", Geneva, Arial, Helvetica, sans-serif
+
+// Standard HTML tags.
+//------------------------------------------------------------------------------
+html, body
+  :background = !color_body
+  :font
+    :size-adjust none
+    :stretch normal
+    :style normal
+    :variant normal
+    :weight normal
+  :height 100%
+  :line-height normal
+
+body, h1, h2, h3, h4, h5, h6, ol, p
+  :margin 0
+  :padding 0
+
+form
+  :margin 0px
+
+ul li
+//  :list-style-type none
+
+// tipografia
+//-----------------------------------------------------------
+body, ol, ul, li, dt, tt, label, input, select, textarea
+  :font
+    :size 13px
+    //:family "Times new roman", Times, Serif
+    family = !font_sans_serif
+    //:family: "MS Trebuchet", Arial, sans-serif;
+
+h1, h2, h3, h4, h5, h6
+  font-family = !font_serif
+  padding: 0.9em 0 0.2em 0
+h1
+  font-size: 2em
+h2
+  font-size: 1.6em
+h3
+  font-size: 1.3em
+h4
+  font-size: 1.1em
+h5
+  font-size: 0.9em
+p
+  :font
+    :family = !font_sans_serif
+
+// Links.
+//------------------------------------------------------------------------------
+a
+  :text-decoration none
+  &:link, &:visited
+    :color = !color_link
+  &:hover 
+    text-decoration: underline
+
+  img
+    :background-color = !color_link_image_background
+    :border none
+    :color = !color_link_image
+    :text-decoration none
+
+// Smaller fonts.
+//------------------------------------------------------------------------------
+abbr
+  :font-size 9px
+
+small
+  :font-size 10px 
+
+dt
+  :font-size 11px 
+
+tt
+  :font-size 12px 
+
+// tables
+//------------------------------------------------------------------------------
+th
+  :background-color #666
+  :color #fff
+
+//_____clases comunes_____
+.clear
+  :clear both
+  :height 0
+  :overflow hidden
+
+.odd
+  :background-color #ddd
+
+.even
+  :background-color #fff
+
+.izquierda
+  :float left
+  :width 50%
+  
+#flash_notice,
+#flash_error,
+#flash_success,
+#flash_failure
+  :padding 5px 20px
+  :margin 0
+
+#flash_notice, 
+#flash_success
+  :background-color #CFC
+  :border solid 1px #6C6
+  :background-image url('/images/icons/tick.png')
+  :background-repeat no-repeat
+  :background-position 0px 5px
+  
+#flash_error,
+#flash_failure
+  :background-color #FCC
+  :border solid 1px #C66
+  :background-image url('/images/icons/exclamation.png')
+  :background-repeat no-repeat
+  :background-position 0px 5px
+
+.fieldWithErrors
+  :display inline
+
+#errorExplanation
+  :width 400px
+  :border 2px solid #CF0000
+  :padding 0
+  :padding-bottom 12px
+  :margin-bottom 20px
+  :background-color #f0f0f0
+  h2
+    :text-align left
+    :padding 5px 5px 5px 15px
+    :margin 0
+    :font
+      :weight bold
+      :size 12px
+    :background-color #c00
+    :color #fff
+  p
+    :color #333
+    :margin-bottom 0
+    :padding 8px
+  ul
+    :margin 2px 24px
+    li
+      :font-size 12px
+      :list-style disc

@@ -1,0 +1,9 @@
+- semantic_form_for [@user,@post] do |form|
+  = form.error_messages
+  - form.inputs do
+    = form.input :titulo
+    = form.input :resumen
+    = form.input :texto
+    = form.input :categoria
+  - form.buttons do
+    = form.commit_button "Submit"

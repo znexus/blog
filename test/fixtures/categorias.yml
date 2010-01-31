@@ -1,0 +1,7 @@
+one:
+  nombre: MyString
+  user_id: 1
+
+two:
+  nombre: MyString
+  user_id: 1

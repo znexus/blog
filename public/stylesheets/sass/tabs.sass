@@ -1,0 +1,33 @@
+#menu
+  margin-top: 33px
+  font-size: 93%
+  line-height: normal
+  height: 35px
+  ul 
+    margin: 0
+    padding: 10px 0 0 50px
+    list-style: none
+    text-align: right
+
+  li
+    display: inline
+    margin: 0
+    padding: 0
+  
+  li span span
+    margin: 0 2px
+    text-decoration: none
+
+  a
+    background-color: black
+    color: white
+    padding: 10px 20px  
+    &:hover
+      :color = !color_naranja_claro
+      
+  li.active span span a
+    background-color: white
+    color: black
+    padding: 10px 20px  
+    &:hover
+      :color = !color_naranja_claro

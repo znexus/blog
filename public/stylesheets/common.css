@@ -1,0 +1,137 @@
+html, body {
+  background: #cccccc;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: 100%;
+  line-height: normal; }
+
+body, h1, h2, h3, h4, h5, h6, ol, p {
+  margin: 0;
+  padding: 0; }
+
+form {
+  margin: 0px; }
+
+
+body, ol, ul, li, dt, tt, label, input, select, textarea {
+  font-size: 13px;
+  font-family: helvetica, Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Lucida Grande, Lucida, Georgia, Times New Roman, Times, Serif;
+  padding: 0.9em 0 0.2em 0; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.6em; }
+
+h3 {
+  font-size: 1.3em; }
+
+h4 {
+  font-size: 1.1em; }
+
+h5 {
+  font-size: 0.9em; }
+
+p {
+  font-family: helvetica, Arial, sans-serif; }
+
+a {
+  text-decoration: none; }
+  a:link, a:visited {
+    color: #0033cc; }
+  a:hover {
+    text-decoration: underline; }
+  a img {
+    background-color: white;
+    border: none;
+    color: white;
+    text-decoration: none; }
+
+abbr {
+  font-size: 9px; }
+
+small {
+  font-size: 10px; }
+
+dt {
+  font-size: 11px; }
+
+tt {
+  font-size: 12px; }
+
+th {
+  background-color: #666;
+  color: #fff; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+.odd {
+  background-color: #ddd; }
+
+.even {
+  background-color: #fff; }
+
+.izquierda {
+  float: left;
+  width: 50%; }
+
+#flash_notice,
+#flash_error,
+#flash_success,
+#flash_failure {
+  padding: 5px 20px;
+  margin: 0; }
+
+#flash_notice,
+#flash_success {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+  background-image: url('/images/icons/tick.png');
+  background-repeat: no-repeat;
+  background-position: 0px 5px; }
+
+#flash_error,
+#flash_failure {
+  background-color: #FCC;
+  border: solid 1px #C66;
+  background-image: url('/images/icons/exclamation.png');
+  background-repeat: no-repeat;
+  background-position: 0px 5px; }
+
+.fieldWithErrors {
+  display: inline; }
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+  #errorExplanation h2 {
+    text-align: left;
+    padding: 5px 5px 5px 15px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #c00;
+    color: #fff; }
+  #errorExplanation p {
+    color: #333;
+    margin-bottom: 0;
+    padding: 8px; }
+  #errorExplanation ul {
+    margin: 2px 24px; }
+    #errorExplanation ul li {
+      font-size: 12px;
+      list-style: disc; }
