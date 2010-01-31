@@ -17,11 +17,7 @@
           .current_user
             = render :partial => 'layouts/usuario'
           #menu
-            - tabs({:always_link => true }) do |tab|
-              = tab.home "Home", root_path
-              = tab.home "Sobre mi", root_path
-              = tab.home "Portafolio", root_path
-              = tab.home "Contacto", root_path
+            = lenguetas
           .clear
         .clear
 

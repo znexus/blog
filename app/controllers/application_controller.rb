@@ -11,10 +11,15 @@ class ApplicationController < ActionController::Base
   private
 
     def iniciar
-      @user = User.find params[:user_id]
+      begin
+        @user = User.find params[:user_id]
+      rescue
+        @user = User.find(:first)
+      end
     end
 
     def autorizado?
+      authenticate_user!
       user_signed_in? and current_user.admin
     end
 

@@ -4,8 +4,11 @@
   %strong Nombre:
   =h @categoria.nombre
 %p
+  %strong ¿Va al menú?:
+  =h @categoria.menu
+%p
   %strong User:
-  =h @categoria.user_id
+  =h @categoria.user
 
 %p
   = link_to "Edit", edit_user_categoria_path(@user,@categoria)

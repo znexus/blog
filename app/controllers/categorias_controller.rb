@@ -1,7 +1,6 @@
 class CategoriasController < ApplicationController
-
-  before_filter :autorizado?, :only => [:create,:update,:destroy]
   before_filter :iniciar
+  before_filter :autorizado?, :only => [:create,:update,:destroy]
 
   def index
     @categorias = @user.categorias

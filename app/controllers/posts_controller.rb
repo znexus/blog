@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_filter :autorizado?, :only => [:create,:update,:destroy]
   before_filter :iniciar
+  before_filter :autorizado?, :only => [:create,:update,:destroy]
   
   def index
     @posts = @user.posts

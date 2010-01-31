@@ -3,11 +3,13 @@
 %table
   %tr
     %th Nombre
+    %th Menu?
     %th User
   - for categoria in @categorias
     %tr
       %td= h categoria.nombre
-      %td= h categoria.user_id
+      %td= categoria.menu
+      %td= h categoria.user
       %td= link_to 'Show', [@user, categoria]
       %td= link_to 'Edit', edit_user_categoria_path(@user,categoria)
       %td= link_to 'Destroy', [@user, categoria], :confirm => 'Are you sure?', :method => :delete

@@ -4,6 +4,6 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :users, :has_many => [:posts,:categorias]
 
-  map.root :controller => :home
+  map.root :controller => :posts
 
 end

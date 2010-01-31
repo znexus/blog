@@ -29,4 +29,18 @@ module LayoutHelper
   def javascript(*args)
     content_for(:head) { javascript_include_tag(*args) }
   end
+  
+  def lenguetas
+    t = ""
+    tabs({:always_link => true }) do |tab|
+      t << tab.home( "Home", root_path)
+      
+      Categoria.menu.each do |c|
+        t << eval("tab.#{c.nombre.parameterize("_")}(\"#{c.nombre}\", \"#{polymorphic_url([User.first,c])}\")")
+      end
+      
+      t << tab.contacto( "Contacto", root_path)
+    end
+    t
+  end
 end

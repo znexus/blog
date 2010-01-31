@@ -22,7 +22,7 @@ Rails::Initializer.run do |config|
   config.action_mailer.smtp_settings = {
     :address        => 'localhost',
     :port           => 25,
-    #:domain         => 'mail.apoyopublicaciones.com',
+    :domain         => 'cristiancastillo.com',
     #:authentication => :login,
     #:user_name      => 'www',
     #:password       => 'secret'
