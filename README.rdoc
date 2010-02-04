@@ -1,32 +1,21 @@
-== Devise Example
+== Blog personal
 
-Example App using devise. http://github.com/plataformatec/devise
+Este es un ensayo de cómo hacer una aplicación, en este caso un blog personal.
+Para hacerlo utilizo:
 
-== Installation
+* Warden y Devise para la autenticación y autorización
+* Haml y Sass para las vistas
+* pandoky para trabajar los textos como Markdown
+* vestal_versions para utilizar versionado
+* formtastic y validation_reflection para los formularios
+* gravtastic para los gravatar
+* coderay y rack-codehighlighter para colorear código en las vistas
 
-Install warden and devise gems if you don't have them installed:
+Mis datos siguen la estructura:
+user tienen muchos posts
+user tienen varias categorías
+post pertenece a categoría
 
-  sudo gem install warden devise
+Es decir, la aplicación permite varios usuarios y un solo blog por usuario.
 
-Rake devise setup task:
-
-  rake devise:setup
-
-This will:
-
-* drop any existing database
-* create a new database
-* migrate the database
-* create a default user and admin
-
-Run the server and use the credentials provided by the rake task to sign in and test the application.
-
-The example is using "rails-footnotes":http://github.com/josevalim/rails-footnotes gem. If you don't have it installed, run the following command to install the gem:
-
-  sudo gem install josevalim-rails-footnotes
-
-If you don't want to install this gem, just comment the line in the environment.rb file.
-
-== License
-
-MIT License. Copyright 2009 Plataforma Tecnologia. http://blog.plataformatec.com.br
+Ahora estoy trabajando en los comentarios y tags

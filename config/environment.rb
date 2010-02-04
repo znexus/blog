@@ -36,6 +36,7 @@ Rails::Initializer.run do |config|
   }
 
   config.active_record.observers = :contacto_observer
+  config.gem 'gravtastic', :version => '>= 2.1.0'
 
   config.gem 'coderay'
   config.gem 'rack-codehighlighter'
