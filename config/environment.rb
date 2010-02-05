@@ -43,4 +43,8 @@ Rails::Initializer.run do |config|
   config.middleware.use Rack::Codehighlighter, :coderay, :markdown => true,
     :element => "pre>code", :pattern => /\A:::(\w+)\s*(\n|&#x000A;)/i, :logging => false
 
+  #config.gem 'awesome_nested_set'
+  config.gem 'simple_autocomplete'
+  config.gem 'acts_as_taggable_on_steroids'
+
 end

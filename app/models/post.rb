@@ -2,8 +2,10 @@ class Post < ActiveRecord::Base
   attr_accessible :titulo, :resumen, :texto, :categoria_id
   belongs_to :user
   belongs_to :categoria
+  has_many :comentarios
   validates_presence_of :titulo, :texto
   versioned
+  acts_as_taggable
 
   def self.per_page
     15

@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :posts, :has_many => :comentarios
 
   map.resources :contactos
 
@@ -7,5 +8,5 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users, :has_many => [:posts,:categorias]
 
   map.root :controller => :posts
-
+  
 end

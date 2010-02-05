@@ -14,9 +14,20 @@
     Dentro de
     = h @post.categoria
 
+.divisor
 
+.comentarios
 
-- if user_signed_in?
+  %h3="#{@post.comentarios.count} comentarios"
+  = render :partial => "comentarios/comentario", :collection =>  @post.comentarios, :spacer_template => "layouts/divisor"
+
+  .divisor
+
+  %h3 Nuevo comentario
+  = nuevo_comentario
+
+- if user_signed_in? and current_user.admin
+  .divisor
   %p
     %strong V# 
     = @post.version

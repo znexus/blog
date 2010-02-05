@@ -89,7 +89,8 @@ th {
   color: #666; }
 
 .divisor {
-  border-bottom: 1px solid #999; }
+  border-bottom: 1px solid #999;
+  margin: 10px 0; }
 
 #flash_notice,
 #flash_error,

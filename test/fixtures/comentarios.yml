@@ -1,0 +1,13 @@
+one:
+  texto: MyText
+  email: MyString
+  web: MyString
+  user_id: 1
+  post_id: 1
+
+two:
+  texto: MyText
+  email: MyString
+  web: MyString
+  user_id: 1
+  post_id: 1

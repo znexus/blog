@@ -1,0 +1,9 @@
+- semantic_form_for [@post,@comentario] do |form|
+  = form.error_messages
+  - form.inputs do
+    = form.input :texto
+    = form.input :nombre
+    = form.input :email
+    = form.input :web
+  - form.buttons do
+    = form.commit_button "Registrar"

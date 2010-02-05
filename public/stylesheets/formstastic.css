@@ -13,7 +13,9 @@ form.formtastic {
     list-style: none; }
   form.formtastic abbr, form.formtastic acronym {
     border: 0;
-    font-variant: normal; }
+    font-variant: bold;
+    font-size: 20px;
+    color: red; }
   form.formtastic input, form.formtastic textarea, form.formtastic select {
     font-family: inherit;
     font-size: inherit;

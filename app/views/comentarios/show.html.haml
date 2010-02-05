@@ -1,0 +1,11 @@
+- title "Comentario"
+
+= render :partial => "comentario" 
+
+- if user_signed_in? and current_user.admin
+  %p
+    = link_to "Edit", edit_post_comentario_path(@post, @comentario)
+    |
+    = link_to "Destroy", [@post,@comentario], :confirm => 'Are you sure?', :method => :delete
+    |
+    = link_to "View All", @post
