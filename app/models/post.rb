@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :titulo, :resumen, :texto, :categoria_id
+  attr_accessible :titulo, :resumen, :texto, :categoria_id, :tag_list
   belongs_to :user
   belongs_to :categoria
   has_many :comentarios

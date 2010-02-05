@@ -1,4 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
+
+  map.resources :tags, :collection => { :autocomplete_for_tag_name => :get}
+
   map.resources :posts, :has_many => :comentarios
 
   map.resources :contactos

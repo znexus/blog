@@ -1,12 +1,29 @@
-- semantic_form_for [@user,@post] do |form|
-  = form.error_messages
-  - form.inputs do
-    = form.input :titulo
-    = form.input :resumen
-    = form.input :texto
-    = form.input :categoria
-  - form.buttons do
-    = form.commit_button "Submit"
+- javascript :defaults, 'jquery.autocomplete'
+- stylesheet "jquery.autocomplete"
+
+- form_for [@user,@post] do |f|
+  = f.error_messages
+  %p 
+    = f.label :titulo
+    %br
+    = f.text_field :titulo
+    %br
+    = f.label :resumen
+    %br
+    = f.text_field :resumen
+    %br
+    = f.label :texto
+    %br
+    = f.text_area :texto, :cols=>90
+    %br
+    = f.label :categoria_id
+    %br
+    = f.collection_select(:categoria_id, Categoria.find(:all,:order=>"nombre desc"), :id, :nombre, {:prompt => "-sin clase-"})
+    %br
+    = f.label :tags
+    %br
+    = f.text_field :tag_list, :class => 'autocomplete', 'autocomplete_url'=>autocomplete_for_tag_name_tags_path
+    = f.submit "Registrar"
 
 
 %script{ :type => "text/javascript" }
