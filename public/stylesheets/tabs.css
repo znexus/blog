@@ -1,31 +1,24 @@
 /*
-Sass::SyntaxError: Undefined variable: "!color_naranja_claro".
-on line 26 of /Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/tabs.sass
+Sass::SyntaxError: Undefined variable: "!font_serif".
+on line 25 of /Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/tabs.sass
 
-22:     background-color: black
-23:     color: white
-24:     padding: 10px 20px  
-25:     &:hover
-26:       :color = !color_naranja_claro
-27:       
-28:   li.active span span a
-29:     background-color: white
-30:     color: black
-31:     padding: 10px 20px  
-32:     &:hover
+21:     background-color: black
+22:     color: white
+23:     padding: 10px 20px
+24:     font-size: 12px 
+25:     :font-family = !font_serif
+26:     &:hover
+27:       :color = !color_naranja_claro
+28:       
+29:   li.active span span a
+30:     background-color: white
+31:     color: black
 
 
 Backtrace:
-/Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/tabs.sass:26
+/Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/tabs.sass:25
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/script/variable.rb:27:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/prop_node.rb:99:in `perform!'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/node.rb:181:in `_perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/node.rb:158:in `perform'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/node.rb:202:in `perform_children'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/node.rb:202:in `map'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/node.rb:202:in `perform_children'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/node.rb:193:in `perform!'
-/usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/rule_node.rb:159:in `perform!'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/node.rb:181:in `_perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/node.rb:158:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/node.rb:202:in `perform_children'
@@ -72,6 +65,7 @@ Backtrace:
 /usr/local/lib/ruby/gems/1.8/gems/warden-0.6.5/lib/warden/manager.rb:96:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/warden-0.6.5/lib/warden/manager.rb:95:in `catch'
 /usr/local/lib/ruby/gems/1.8/gems/warden-0.6.5/lib/warden/manager.rb:95:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-codehighlighter-0.4.1/lib/rack/codehighlighter.rb:25:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
 /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
@@ -111,4 +105,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined variable: \"!color_naranja_claro\".\A on line 26 of /Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/tabs.sass\A \A 22:     background-color: black\A 23:     color: white\A 24:     padding: 10px 20px  \A 25:     &:hover\A 26:       :color = !color_naranja_claro\A 27:       \A 28:   li.active span span a\A 29:     background-color: white\A 30:     color: black\A 31:     padding: 10px 20px  \A 32:     &:hover\A "; }
+  content: "Sass::SyntaxError: Undefined variable: \"!font_serif\".\A on line 25 of /Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/tabs.sass\A \A 21:     background-color: black\A 22:     color: white\A 23:     padding: 10px 20px\A 24:     font-size: 12px \A 25:     :font-family = !font_serif\A 26:     &:hover\A 27:       :color = !color_naranja_claro\A 28:       \A 29:   li.active span span a\A 30:     background-color: white\A 31:     color: black\A "; }

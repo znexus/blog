@@ -2,6 +2,21 @@
 - description h @post.resumen
 
 = render :partial => 'posts/leyenda', :locals => {:post => @post} 
+
+- if user_signed_in? and current_user.admin
+  %p
+    %strong V# 
+    = @post.version
+    |
+    = link_to("Versión previa", user_post_path(@user,@post, :version => @post.version - 1)) if @post.version and @post.version > 1
+    |
+    = link_to("Última versión", user_post_path(@user,@post, :version => nil)) if params[:version]
+    |
+    = link_to "Editar", edit_user_post_path(@user,@post)
+    |
+    = link_to "Eliminar", [@user,@post], :confirm => 'Are you sure?', :method => :delete
+    |
+    = link_to "Ver todas", user_posts_path(@user)
   
 .entrada
 
@@ -9,15 +24,14 @@
     = @post.resumen
 
   = @post.texto_html
-
-  %p{:class=>"categoria"}
-    Dentro de
-    = h @post.categoria
   
-  %p{:class=>"tags"}
-    Etiquetado como
+  %p= add_this
+  
+  %p{:class=>"leyenda"}
+    %em{:class=>"gris"} Dentro de
+    = h @post.categoria
+    %em{:class=>"gris"} Etiquetado como
     = h @post.tag_list
-
 
 .divisor
 
@@ -30,20 +44,4 @@
 
   %h3 Nuevo comentario
   = nuevo_comentario
-
-- if user_signed_in? and current_user.admin
-  .divisor
-  %p
-    %strong V# 
-    = @post.version
-    |
-    = link_to("Versión previa", user_post_path(@user,@post, :version => @post.version - 1)) if @post.version and @post.version > 1
-    |
-    = link_to("Última versión", user_post_path(@user,@post, :version => nil)) if params[:version]
-    |
-    = link_to "Edit", edit_user_post_path(@user,@post)
-    |
-    = link_to "Destroy", [@user,@post], :confirm => 'Are you sure?', :method => :delete
-    |
-    = link_to "View All", user_posts_path(@user)
 

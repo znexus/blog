@@ -55,4 +55,39 @@ module LayoutHelper
     end
     content_tag :ul, t, :id => "categorias"
   end
+  
+  def add_this
+    add_this = <<texto
+    <!-- AddThis Button BEGIN -->
+      <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;username=ccastillop">
+        <img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/>
+      </a>
+      <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccastillop"></script>
+    <!-- AddThis Button END -->
+texto
+  end
+  
+  def truncate_words(text, length = 40, end_string = ' …')
+    return if text.nil?
+    text = strip_tags text
+    words = text.split()
+    words[0..(length-1)].join(' ') + (words.length > length ? end_string : '')
+  end
+  
+  def google_analytics
+    texto = <<javascript
+    
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-12865942-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+    
+javascript
+  end
+  
 end

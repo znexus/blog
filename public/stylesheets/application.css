@@ -17,21 +17,22 @@ form {
 
 
 body, ol, ul, li, dt, tt, label, input, select, textarea {
-  font-size: 13px;
-  font-family: helvetica, Arial, sans-serif; }
+  font-size: 15px;
+  font-family: Georgia, Cambria, Times New Roman, Times, serif;
+  font-color: #333; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Lucida Grande, Lucida, Georgia, Times New Roman, Times, Serif;
   padding: 0.9em 0 0.1em 0; }
 
 h1 {
-  font-size: 2em; }
+  font-size: 1.8em; }
 
 h2 {
-  font-size: 1.6em; }
+  font-size: 1.4em; }
 
 h3 {
-  font-size: 1.3em; }
+  font-size: 1.2em; }
 
 h4 {
   font-size: 1.1em; }
@@ -40,7 +41,7 @@ h5 {
   font-size: 0.9em; }
 
 p {
-  font-family: helvetica, Arial, sans-serif; }
+  font-family: Georgia, Cambria, Times New Roman, Times, serif; }
 
 a {
   text-decoration: none; }
@@ -147,12 +148,17 @@ th {
   width: 790px;
   margin: 0 auto; }
   .contenido p {
-    margin: 1em 0 0.5em 0; }
+    margin: 1em 0 0.5em 0;
+    line-height: 1.3em;
+    font-weight: 400; }
     .contenido p a {
-      color: #666; }
+      color: blue; }
   .contenido .leyenda {
     font-size: 0.8em;
     margin: 0; }
+  .contenido .resumen {
+    color: #666;
+    font-size: 0.95em; }
 
 #header {
   padding-top: 10px;
@@ -203,7 +209,6 @@ th {
 
 #menu {
   margin-top: 33px;
-  font-size: 93%;
   line-height: normal;
   height: 35px; }
   #menu ul {
@@ -221,7 +226,9 @@ th {
   #menu a {
     background-color: black;
     color: white;
-    padding: 10px 20px; }
+    padding: 10px 20px;
+    font-size: 12px;
+    font-family: Lucida Grande, Lucida, Georgia, Times New Roman, Times, Serif; }
     #menu a:hover {
       color: #ff9834; }
   #menu li.active span span a {

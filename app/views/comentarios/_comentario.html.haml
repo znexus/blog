@@ -11,8 +11,8 @@
     = l comentario.created_at, :format => "%d %B %Y %H:%M"
     - unless comentario.web.blank?
       %em{:class=>"gris"} web:
-      = h comentario.web
-
+      = link_to h(comentario.web), h(comentario.web)
+      
   %p
     =h comentario.texto
   

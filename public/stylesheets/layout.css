@@ -1,22 +1,22 @@
 /*
 Sass::SyntaxError: Undefined variable: "!font_serif".
-on line 32 of /Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/layout.sass
+on line 35 of /Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/layout.sass
 
-28:     float: left
-29:     width: 50%
-30:     font-size: 2em
-31:     p
-32:       :font-family = !font_serif
-33:     .apa
-34:       font-size: 1.5em
-35:       color: #ddd
-36:     .slogan
-37:       font-size: 0.6em
-38:       font-style: italic
+31:     float: left
+32:     width: 50%
+33:     font-size: 2em
+34:     p
+35:       :font-family = !font_serif
+36:     .apa
+37:       font-size: 1.5em
+38:       color: #ddd
+39:     .slogan
+40:       font-size: 0.6em
+41:       font-style: italic
 
 
 Backtrace:
-/Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/layout.sass:32
+/Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/layout.sass:35
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/script/variable.rb:27:in `perform'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/prop_node.rb:99:in `perform!'
 /usr/local/lib/ruby/gems/1.8/gems/haml-2.2.15/rails/../lib/sass/tree/node.rb:181:in `_perform'
@@ -112,4 +112,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined variable: \"!font_serif\".\A on line 32 of /Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/layout.sass\A \A 28:     float: left\A 29:     width: 50%\A 30:     font-size: 2em\A 31:     p\A 32:       :font-family = !font_serif\A 33:     .apa\A 34:       font-size: 1.5em\A 35:       color: #ddd\A 36:     .slogan\A 37:       font-size: 0.6em\A 38:       font-style: italic\A "; }
+  content: "Sass::SyntaxError: Undefined variable: \"!font_serif\".\A on line 35 of /Users/ccastillop/Sites/cristiancastillo/public/stylesheets/sass/layout.sass\A \A 31:     float: left\A 32:     width: 50%\A 33:     font-size: 2em\A 34:     p\A 35:       :font-family = !font_serif\A 36:     .apa\A 37:       font-size: 1.5em\A 38:       color: #ddd\A 39:     .slogan\A 40:       font-size: 0.6em\A 41:       font-style: italic\A "; }

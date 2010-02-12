@@ -12,7 +12,7 @@
         #logo
           %p="cristian<span class='apa'>Castillo</span>"
           %p.slogan
-            Consultor y desarrollador WEB
+            no es un blog más...
         #user
           .current_user
             = render :partial => 'layouts/usuario'
@@ -46,9 +46,15 @@
 
           = categorias
 
-          %p
-            Tags
-        
+          %p 
+            Links:
+            %ul
+              %li= link_to "Blogpuntocom.com", "http://blogpuntocom.com"
+              %li= link_to "Z-nexus", "http://z-nexus.com"
+              %li= link_to "Casadeplaya.com", "http://casadeplaya.com"
+              %li= link_to "Grupo Ruby on Rails Perú", "http://groups.google.com.pe/group/rubyonrailsperu"
+              %li= link_to "Página del grupo RoR Perú", "http://rails.pe"
+
           - if user_signed_in?
             %p= link_to("Nueva entrada", new_user_post_path(current_user))
   
@@ -58,4 +64,5 @@
       .contenido
         Desarrollado por 
         = link_to "Z-nexus", "http://z-nexus.com"
+      = google_analytics
 
