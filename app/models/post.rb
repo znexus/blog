@@ -4,8 +4,8 @@ class Post < ActiveRecord::Base
   belongs_to :categoria
   has_many :comentarios
   validates_presence_of :titulo, :texto
-  versioned
   acts_as_taggable
+  versioned
 
   def self.per_page
     15

@@ -12,7 +12,7 @@ Rails::Initializer.run do |config|
   
   config.gem "pandoku"
   #config.gem "maruku"
-  config.gem 'vestal_versions'
+  config.gem 'vestal_versions', :version => '0.8.3'
     
   config.gem 'warden', :version => '0.6.5'
   config.gem 'devise', :version => '0.7.0'
@@ -46,5 +46,7 @@ Rails::Initializer.run do |config|
   #config.gem 'awesome_nested_set'
   config.gem 'simple_autocomplete'
   config.gem 'acts_as_taggable_on_steroids'
+
+  config.gem 'acts_as_textcaptcha'
 
 end

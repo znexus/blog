@@ -67,7 +67,7 @@ module LayoutHelper
 texto
   end
   
-  def truncate_words(text, length = 40, end_string = ' …')
+  def truncate_words(text, length = 80, end_string = ' …')
     return if text.nil?
     text = strip_tags text
     words = text.split()

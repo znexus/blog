@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100204230340) do
+ActiveRecord::Schema.define(:version => 20100215211046) do
 
   create_table "categorias", :force => true do |t|
     t.string   "nombre"
@@ -98,10 +98,17 @@ ActiveRecord::Schema.define(:version => 20100204230340) do
     t.text     "changes"
     t.integer  "number"
     t.datetime "created_at"
+    t.integer  "user_id"
+    t.string   "user_type"
+    t.string   "user_name"
+    t.string   "tag"
   end
 
   add_index "versions", ["created_at"], :name => "index_versions_on_created_at"
   add_index "versions", ["number"], :name => "index_versions_on_number"
+  add_index "versions", ["tag"], :name => "index_versions_on_tag"
+  add_index "versions", ["user_id", "user_type"], :name => "index_versions_on_user_id_and_user_type"
+  add_index "versions", ["user_name"], :name => "index_versions_on_user_name"
   add_index "versions", ["versioned_type", "versioned_id"], :name => "index_versions_on_versioned_type_and_versioned_id"
 
 end

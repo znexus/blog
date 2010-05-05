@@ -14,7 +14,7 @@
     %br
     = f.label :texto
     %br
-    = f.text_area :texto, :cols=>90
+    = f.text_area :texto, :cols=>70
     %br
     = f.label :categoria_id
     %br
@@ -26,13 +26,3 @@
     %br
     = f.submit "Registrar"
 
-
-%script{ :type => "text/javascript" }
-
-  wmd_options = {
-  output: "Markdown",
-  lineLength: 80,
-  buttons: "bold italic | link blockquote code image | ol ul hr",
-  autostart: true
-  }
-%script{ :type => "text/javascript", :src => "/javascripts/wmd/wmd.js" }

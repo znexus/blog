@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   def index
     page = params[:page]
     page ||= 1 
-    @posts = @user.posts.paginate(:page => page)
+    @posts = @user.posts.paginate(:page => page, :order=> "created_at desc")
   end
   
   def show
