@@ -46,7 +46,7 @@ Rails::Initializer.run do |config|
   #config.gem 'awesome_nested_set'
   config.gem 'simple_autocomplete'
   config.gem 'acts_as_taggable_on_steroids'
-
+  #config.gem 'bcrypt-ruby', :lib => "bcrypt"
   config.gem 'acts_as_textcaptcha'
 
 end

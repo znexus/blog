@@ -1,0 +1,76 @@
+development: &non_production_settings
+  #api_key: 8u5ixtdnq9csc84cok0owswgo
+  # bcrypt can be used to encrypt valid possible answers in your session; http://bcrypt-ruby.rubyforge.org/
+  # (recommended if you are using cookie session storage)
+  # NOTE: bcrypt_salt must be a valid bcrypt salt; for security PLEASE CHANGE THIS, open irb and enter; require 'bcrypt'; BCrypt::Engine.generate_salt
+  #bcrypt_salt: $2a$10$j0bmycH.SVfD1b5mpEGPpe
+  # an optional logarithmic var which determines how computational expensive the hash is to calculate (a cost of 4 is twice as much work as a cost of 3)
+  #bcrypt_cost: 10 # default is 10, must be > 4 (large number means slower encryption)           
+  # if you'd rather NOT use bcrypt, just remove these two settings, bcrypt_salt and bcrypt_cost, valid possible answers will be MD5 digested in your session
+  questions:
+      - question: '¿El hielo es frio o caliente?'
+        answers: 'frio'
+      - question: '¿De qué color es una naranja?'
+        answers: 'naranja, anaranjada, anaranjado'
+      - question: '¿Cuándo da dos mas tres?'
+        answers: '5,cinco'
+      - question: '¿Cuánto es cinco veces dos?'
+        answers: '10,diez'
+      - question: '¿Cuántos colores hay en las lista?: verde, marrón, pie y azul?'
+        answers: '3,tres'
+      - question: '¿Cuál es el nombre de Jorge?'
+        answers: 'jorge,Jorge'
+      - question: '¿Once menos dos?'
+        answers: '9,nueve'
+      - question: '¿El agua hirviendo es caliente o fria?'
+        answers: 'caliente'
+      - question: '¿De qué color es una camisa azul?'
+        answers: 'azul'
+      - question: '¿Cuánto da 16 mas cuatro?'
+        answers: '20,veinte'
+      - question: "Inserte el siguiente número en la secuencia 10, 11, 12, 13, 14, ??"
+        answers: "15, quince"
+      - question: "¿Cuanto es dos mas dos?"
+        answers: "4"
+      - question: "¿Qué numero es anterior al doce?"
+        answers: "11,once"
+      - question: "¿Dos veces cinco es?"
+        answers: "10,diez"
+      - question: "Inserte el siguiente número en la secuencia 10, 11, 12, 13, 14, ??"
+        answers: "15,quince"
+      - question: "¿Cuánto es cinco por cinco?"
+        answers: "25,venticinco"
+      - question: "¿Diez dividido entre dos es?"
+        answers: "5,cinco"
+      - question: "¿Qué día le sigue al lunes?"
+        answers: "martes"
+      - question: "¿Cuál es el último mes del año?"
+        answers: "diciembre"
+      - question: "¿Cuántos minutos hay en una hora?"
+        answers: "60,sesenta"
+      - question: "¿Qué es lo contrario de arriba?"
+        answers: "abajo"
+      - question: "¿Qué es lo contrario de norte?"
+        answers: "sur"
+      - question: "¿Qué es lo contrario de malo?"
+        answers: "bueno"
+      - question: "Complete lo siguiente 'Soy, luego ..."
+        answers: "existo"
+      - question: "¿Cuánto es cuatro veces cuatro?"
+        answers: "16"
+      - question: "¿Qué numero le sigue al 20?"
+        answers: "21"
+      - question: "¿Qué mes viene antes de Julio?"
+        answers: "junio"
+      - question: "¿Quince dividido entre tres es?"
+        answers: "5"
+      - question: "¿Qué es catorce menos cuatro?"
+        answers: "10"
+      - question: "¿Qué viene después? 'Lunes, Martes, Miércoles'"
+        answers: "Jueves"
+        
+test: 
+  *non_production_settings
+  
+production:
+  *non_production_settings

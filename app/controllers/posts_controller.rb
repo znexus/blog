@@ -11,11 +11,20 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @post.revert_to(params[:version].to_i) if params[:version]
-    
+    c = Comentario.new
+    c.post = @post
+    if user_signed_in?
+      c.user = current_user
+      c.email = current_user.email
+      c.web = current_user.web
+    end
+    @comentario = c
+    spamify(@comentario)    
   end
   
   def new
     @post = Post.new
+
   end
   
   def create

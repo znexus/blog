@@ -12,15 +12,17 @@ class ComentariosController < ApplicationController
   
   def new
     @comentario = Comentario.new
+    spamify(@comentario)
   end
   
   def create
-    @comentario = Comentario.new(params[:comentario])
+    @comentario = Comentario.new(params[:comentario].merge(:possible_answers => session[:possible_answers]))
     @comentario.post = @post
     if @comentario.save
-      flash[:notice] = "Successfully created comentario."
+      flash[:notice] = "Comentario creado."
       redirect_to @post
     else
+      spamify(@comentario)
       render :action => 'new'
     end
   end
