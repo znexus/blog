@@ -10,12 +10,22 @@ Para hacerlo utilizo:
 * formtastic y validation_reflection para los formularios
 * gravtastic para los gravatar
 * coderay y rack-codehighlighter para colorear código en las vistas
+* Paper_clip para manejar las imágenes y fotografías
+* Jrails y Fancybox para trabajar con JQuery y cajas de imágenes.
 
 Mis datos siguen la estructura:
-user tienen muchos posts
-user tienen varias categorías
-post pertenece a categoría
+
+- user tienen muchos posts
+- user tienen varias categorías
+- post pertenece a categoría
+- post tiene muchas imágenes
 
 Es decir, la aplicación permite varios usuarios y un solo blog por usuario.
 
-Ahora estoy trabajando en los comentarios y tags
+TODOs
+
+- Mejorar el diseño
+- Rutas en formato que denote fechas
+- Mejorar lo social: compartir, enviar
+- Mejoras SEO para tener más tráfico
+- Promoción, otros... ?
