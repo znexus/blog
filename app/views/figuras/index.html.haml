@@ -1,0 +1,38 @@
+
+%h1
+  = "Figuras de #{@documento}"
+%p= link_to "#{image_tag('icons/add.png')} Nueva Figura", new_post_figura_path(@post)
+
+- if @figuras.size > 0
+
+  %table
+    %tr
+      %th Documento
+      %th Código
+      %th Imagen
+      %th Nombre
+      %th Descripción
+        
+    - for figura in @figuras
+      %tr
+        %td= link_to figura.post, figura.post
+        %td= "figura_#{figura.id}"
+        %td= image_tag figura.img.url(:thumb)
+        %td= h figura.nombre
+        %td= h figura.descripcion
+        %td= link_to 'Show', [@post,figura]
+        %td= link_to 'Edit', edit_post_figura_path(@post,figura)
+        %td= link_to 'Destroy', [@post,figura], :confirm => 'Are you sure?', :method => :delete
+
+- else
+
+  %p 
+    Aún no ha subido figuras. 
+    Para hacerlo, haga clic en 
+    = link_to "Nueva Figura", new_post_figura_path(@post)
+    %br
+    Luego, puede insertar la figura simplemente insertando el texto:
+    %br
+    %strong
+      figura_XX
+    directamente en el contenido

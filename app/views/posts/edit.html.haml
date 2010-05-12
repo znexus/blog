@@ -1,8 +1,10 @@
 - title "Edit Post"
 
 = render :partial => 'form'
-
 %p
   = link_to "Show", [@user,@post]
   |
   = link_to "View All", user_posts_path(@user)
+
+%h3 Figuras
+%iframe{:src=>post_figuras_path(@post), :width=>"100%", :height=>"300px"}

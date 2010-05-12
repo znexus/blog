@@ -1,0 +1,21 @@
+- title @figura
+
+%p
+  %strong Dentro de:
+  =h @figura.post
+%p
+  = image_tag @figura.img.url
+%p
+  %strong Nombre:
+  =h @figura.nombre
+%p
+  %strong Descripcion:
+  =h @figura.descripcion
+
+- if user_signed_in?
+  %p
+    = link_to "Edit", edit_post_figura_path(@post,@figura)
+    |
+    = link_to "Destroy",[@post,@figura], :confirm => 'Are you sure?', :method => :delete
+    |
+    = link_to "View All", post_figuras_path(@post)

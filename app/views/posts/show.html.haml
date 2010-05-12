@@ -1,6 +1,10 @@
 - title h @post.titulo
 - description h @post.resumen
 
+- content_for :head, stylesheet_link_tag('/fancybox/jquery.fancybox-1.2.5.css')
+- content_for :head, javascript_include_tag(:defaults)
+- content_for :head, javascript_include_tag('/fancybox/jquery.fancybox-1.2.5.js')
+
 = render :partial => 'posts/leyenda', :locals => {:post => @post} 
 
 - if user_signed_in? and current_user.admin
@@ -23,7 +27,7 @@
   %p{:class=>"resumen"}
     = @post.resumen
 
-  = @post.texto_html
+  = to_html @post.texto
   
   %p= add_this
   
@@ -44,4 +48,18 @@
 
   %h3 Nuevo comentario
   = nuevo_comentario
+
+
+:javascript
+  $(document).ready(function() { 
+    $("a.box").fancybox({ 
+      'hideOnContentClick': false,
+      'zoomOpacity'			: true,
+      'zoomSpeedIn'     : 400, 
+      'zoomSpeedOut'    : 400, 
+      'overlayShow'			: true,
+      'frameWidth'      : 900,
+      'frameHeight'     : 500
+    });
+  }); 
 

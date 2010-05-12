@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100215211046) do
+ActiveRecord::Schema.define(:version => 20100512193709) do
 
   create_table "categorias", :force => true do |t|
     t.string   "nombre"
@@ -38,6 +38,22 @@ ActiveRecord::Schema.define(:version => 20100215211046) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "figuras", :force => true do |t|
+    t.string   "nombre"
+    t.text     "descripcion"
+    t.integer  "orden"
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "figuras", ["post_id"], :name => "index_figuras_on_post_id"
+  add_index "figuras", ["user_id"], :name => "index_figuras_on_user_id"
 
   create_table "posts", :force => true do |t|
     t.string   "titulo"
@@ -98,17 +114,10 @@ ActiveRecord::Schema.define(:version => 20100215211046) do
     t.text     "changes"
     t.integer  "number"
     t.datetime "created_at"
-    t.integer  "user_id"
-    t.string   "user_type"
-    t.string   "user_name"
-    t.string   "tag"
   end
 
   add_index "versions", ["created_at"], :name => "index_versions_on_created_at"
   add_index "versions", ["number"], :name => "index_versions_on_number"
-  add_index "versions", ["tag"], :name => "index_versions_on_tag"
-  add_index "versions", ["user_id", "user_type"], :name => "index_versions_on_user_id_and_user_type"
-  add_index "versions", ["user_name"], :name => "index_versions_on_user_name"
   add_index "versions", ["versioned_type", "versioned_id"], :name => "index_versions_on_versioned_type_and_versioned_id"
 
 end

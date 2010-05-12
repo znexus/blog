@@ -48,5 +48,6 @@ Rails::Initializer.run do |config|
   config.gem 'acts_as_taggable_on_steroids'
   #config.gem 'bcrypt-ruby', :lib => "bcrypt"
   config.gem 'acts_as_textcaptcha'
+  config.gem 'thoughtbot-paperclip', :lib => 'paperclip', :source => 'http://gems.github.com'
 
 end

@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
   belongs_to :user
   belongs_to :categoria
   has_many :comentarios
+  has_many :figuras
   validates_presence_of :titulo, :texto
   acts_as_taggable
   versioned
@@ -17,10 +18,6 @@ class Post < ActiveRecord::Base
 
   def to_param
     "#{id}-#{to_s.parameterize}"
-  end
-  
-  def texto_html
-    texto.pandoku(:markdown, :html)
   end
   
 end
