@@ -90,4 +90,14 @@ texto
 javascript
   end
   
+    def facebook_like
+      fb = <<facebook
+      <iframe src="http://www.facebook.com/widgets/like.php?href=#{request.url}"
+              scrolling="no" frameborder="0"
+              style="border:none; width:170px; height:160px">
+      </iframe>
+
+facebook
+    end
+  
 end

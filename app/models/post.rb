@@ -7,6 +7,8 @@ class Post < ActiveRecord::Base
   validates_presence_of :titulo, :texto
   acts_as_taggable
   versioned
+  
+  named_scope :libres, :conditions => "categoria_id <> 2"
 
   def self.per_page
     15

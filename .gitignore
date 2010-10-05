@@ -5,3 +5,4 @@ tmp/*
 public/system/*
 *.sqlite3
 public/images/icons/*
+public/*.zip

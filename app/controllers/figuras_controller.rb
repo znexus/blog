@@ -1,6 +1,6 @@
 class FigurasController < ApplicationController
   before_filter :get_post
-  before_filter :autorizado?
+  before_filter :autorizado?, :except => :show
   
   def index
     @figuras = @post.figuras
