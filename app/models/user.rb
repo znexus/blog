@@ -1,9 +1,9 @@
-class User < ActiveRecord::Base
-
+class User < ActiveRecord::Base         
   attr_protected :admin
-  devise :all
+  devise :database_authenticatable, #:registerable,
+         :recoverable, :rememberable, :trackable, :validatable
   is_gravtastic! :size => 120
-  validates_format_of :web, :with => Ccp::WebAddress ,
+  validates_format_of :web, :with => Ccp::WebAddress,
                       :allow_blank=>true,
                       :message => "El URL de tu web es inválido. http://ejemplo.com "  
   

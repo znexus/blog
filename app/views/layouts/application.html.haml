@@ -5,13 +5,14 @@
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     %meta( name="google-site-verification" content="uZ_pGNrkkzCJXfSUxTREnnV8UoEm6mZ6XNdjvDQJ-zo" )/
     = stylesheet_link_tag 'application'
+    = csrf_meta_tag
     = yield(:head)
 
   %body
     #header
       .contenido_header
         #logo
-          %p="cristian<span class='apa'>Castillo</span>"
+          %p="cristian<span class='apa'>Castillo</span>".html_safe
           %p.slogan
             no es un blog más...
         #user

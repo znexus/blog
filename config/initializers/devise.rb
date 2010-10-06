@@ -1,10 +1,11 @@
 # Use this hook to configure devise mailer, warden hooks and so forth. The first
 # four configuration values can also be set straight in your models.
 Devise.setup do |config|
+  require 'devise/orm/active_record'
   # Configure the frameworks used by default. You should always set this value
   # because if Devise add a new strategy, it won't be added to your application
   # by default, unless you configure it here.
-  config.all = [:authenticatable, :confirmable, :recoverable, :rememberable, :timeoutable, :trackable, :validatable]
+  #config.all = [:authenticatable, :confirmable, :recoverable, :rememberable, :timeoutable, :trackable, :validatable]
 
   # Invoke `rake secret` and use the printed value to setup a pepper to generate
   # the encrypted password. By default no pepper is used.

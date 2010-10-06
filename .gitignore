@@ -1,8 +1,11 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+
 .autotest
-log/*
-tmp/*
 *~
 public/system/*
-*.sqlite3
 public/images/icons/*
 public/*.zip
+

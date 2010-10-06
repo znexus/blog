@@ -44,7 +44,7 @@ module LayoutHelper
       
       t << tab.contacto( "Contacto", new_contacto_path)
     end
-    t
+    t.html_safe
   end
   
   #entrega las categorías con entradas
@@ -65,6 +65,7 @@ module LayoutHelper
       <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccastillop"></script>
     <!-- AddThis Button END -->
 texto
+    add_this.html_safe
   end
   
   def truncate_words(text, length = 80, end_string = ' …')
@@ -88,6 +89,7 @@ texto
     } catch(err) {}</script>
     
 javascript
+    texto.html_safe
   end
   
     def facebook_like
@@ -98,6 +100,7 @@ javascript
       </iframe>
 
 facebook
+      fb.html_safe
     end
   
 end
