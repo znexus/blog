@@ -1,4 +1,4 @@
-DESTINO="ccastillo@cristiancastillo.com:/home/ccastillo/app"
+DESTINO="ccastillo@cristiancastillo.com:/home/ccastillo/apps/blog"
 if test $1 = "go"
 then
 echo "sincronizando relojes pero de verdad "
