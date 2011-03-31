@@ -1,11 +1,26 @@
 module PostsHelper
+  # def to_html(text, ancho = :large)
+  #   #procesado del texto.
+  #   #existen imágenes
+  #   #text = text.pandoku(:markdown => :html)
+  #   
+  #   #text = (text.blank? ? "" : Maruku.new(text).to_html)
+  #   text = text.pandoku(:markdown, :html)
+  #   text.gsub!(/figura_([0-9]+)/) do |id|
+  #     #begin
+  #       f = Figura.find($1.to_i)
+  #       render_figura(f, ancho)
+  #     #rescue
+  #     #  content_tag(:p, "-figura no encontrada-",:class=>:error)
+  #     #end
+  #   end
+  #   text
+  # end
+
+  # Format text for display.                                                                    
   def to_html(text, ancho = :large)
-    #procesado del texto.
-    #existen imágenes
-    #text = text.pandoku(:markdown => :html)
-    
-    #text = (text.blank? ? "" : Maruku.new(text).to_html)
-    text = text.pandoku(:markdown, :html)
+    text = sanitize(markdown(text))
+
     text.gsub!(/figura_([0-9]+)/) do |id|
       #begin
         f = Figura.find($1.to_i)
@@ -16,6 +31,12 @@ module PostsHelper
     end
     text
   end
+
+  # Process text with Markdown.                                                                 
+  def markdown(text)
+    BlueCloth::new(text).to_html
+  end
+
   
   def render_figura(figura, ancho)
     content_tag(:div, 

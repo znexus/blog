@@ -6,9 +6,10 @@ module TabFu
     def tabs(options = {})
       id = options.delete(:id) || '__default'
       html_id = id.nil? || id == '__default' ? '' : " id=\"#{id}\""
-      concat("<ul#{html_id}>")
-      yield(List.new(self, id, options))
-      concat('</ul>')
+      t = "<ul#{html_id}>"
+      t << yield(List.new(self, id, options))
+      t << '</ul>'
+      t.html_safe
     end
 
   end

@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   attr_protected :admin
   devise :database_authenticatable, #:registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  include Gravtastic
   is_gravtastic! :size => 120
   validates_format_of :web, :with => Ccp::WebAddress,
                       :allow_blank=>true,

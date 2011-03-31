@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
       begin
         @user = User.find params[:user_id]
       rescue
-        @user = User.find(:first)
+        @user = User.first
       end
     end
 

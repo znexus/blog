@@ -53,7 +53,7 @@ module LayoutHelper
     Categoria.all(:order => "nombre", :conditions => "menu is false").each do |c|
       t << content_tag(:li, link_to(c.nombre, [c.user, c]))
     end
-    content_tag :ul, t, :id => "categorias"
+    content_tag( :ul, t.html_safe, :id => "categorias")
   end
   
   def add_this

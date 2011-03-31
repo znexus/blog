@@ -1,8 +1,9 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
+gem 'rails', '3.0.5'
 gem 'mysql'
-gem "pandoku"
+#gem "pandoku"
+gem 'bluecloth'
 gem 'vestal_versions', '0.8.3'
 
 gem 'devise', "~> 1.1.2"
@@ -17,6 +18,6 @@ gem 'gravtastic',  '>= 2.1.0'
 #gem 'rack-codehighlighter'
 
 gem 'simple_autocomplete'
-gem 'acts_as_taggable_on_steroids'
+gem 'acts_as_taggable_on_steroids', :git => 'git://github.com/Agiley/acts_as_taggable_on_steroids.git'
 gem 'acts_as_textcaptcha'
 gem 'paperclip'

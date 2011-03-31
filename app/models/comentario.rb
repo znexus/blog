@@ -3,6 +3,7 @@ class Comentario < ActiveRecord::Base
   belongs_to :post
   belongs_to :user
   validates_presence_of :texto, :nombre, :email
+  include Gravtastic
   is_gravtastic! :size => 60
   validates_format_of :email, :with => Ccp::EmailAddress
   validates_format_of :web, :with => Ccp::WebAddress, :allow_blank => true

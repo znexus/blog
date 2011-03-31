@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
   acts_as_taggable
   versioned
   
-  named_scope :libres, :conditions => "categoria_id <> 2"
+  scope :libres, where("categoria_id <> 2")
 
   def self.per_page
     15
