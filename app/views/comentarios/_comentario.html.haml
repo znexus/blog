@@ -6,7 +6,7 @@
 
   %p{:class=>"leyenda"}
     %em{:class=>"gris"} Por:
-    = h comentario.nombre
+    = comentario.nombre
     %em{:class=>"gris"} el:
     = l comentario.created_at, :format => "%d %B %Y %H:%M"
     - unless comentario.web.blank?

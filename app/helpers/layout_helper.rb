@@ -39,7 +39,7 @@ module LayoutHelper
       t << tab.home( "Home", root_path)
       
       Categoria.menu.each do |c|
-        t << eval("tab.#{c.nombre.parameterize("_")}(\"#{c.nombre}\", \"#{polymorphic_url([User.first,c])}\")")
+        t << eval("tab.#{c.nombre.parameterize}(\"#{c.nombre}\", \"#{polymorphic_url([User.first,c])}\")")
       end
       
       t << tab.contacto( "Contacto", new_contacto_path)

@@ -9,5 +9,5 @@ else
 echo "haciendo la finta que sincronizo para ver qué pasa A $DESTINO"
 rsync -azvr --force --delete --dry-run --exclude-from=rsync_exclude.txt ./ $DESTINO
 fi
- 
+
 curl -s "http://cristiancastillo.com"

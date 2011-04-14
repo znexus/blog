@@ -5,8 +5,7 @@ class Categoria < ActiveRecord::Base
   
   validates_presence_of :nombre
   
-  named_scope :menu,
-    :conditions => "menu is true"
+  scope :menu, where("menu is true")
   
   def to_s
     nombre

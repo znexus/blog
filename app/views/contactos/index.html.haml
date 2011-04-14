@@ -8,10 +8,10 @@
     %th User
   - for contacto in @contactos
     %tr
-      %td= h contacto.nombre
-      %td= h contacto.email
-      %td= h contacto.texto
-      %td= h contacto.user_id
+      %td= contacto.nombre
+      %td= contacto.email
+      %td= contacto.texto
+      %td= contacto.user_id
       %td= link_to 'Show', contacto
       %td= link_to 'Edit', edit_contacto_path(contacto)
       %td= link_to 'Destroy', contacto, :confirm => 'Are you sure?', :method => :delete

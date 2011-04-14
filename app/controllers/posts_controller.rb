@@ -1,11 +1,12 @@
 class PostsController < ApplicationController
   before_filter :iniciar
   before_filter :autorizado?, :except => [:show,:index]
+  tab :post
   
   def index
     page = params[:page]
     page ||= 1 
-    @posts = @user.posts.libres.paginate(:page => params[:page], :order=> "created_at desc")
+    @posts = @user.posts.where("categoria_id <> 2").paginate(:page => params[:page], :order=> "created_at desc")
   end
   
   def show
@@ -24,7 +25,6 @@ class PostsController < ApplicationController
   
   def new
     @post = Post.new
-
   end
   
   def create

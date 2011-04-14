@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!, :only => [:edit, :update, :destroy]
-  tab :user
 
   def new
     @user = User.new

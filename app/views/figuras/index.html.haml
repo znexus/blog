@@ -18,8 +18,8 @@
         %td= link_to figura.post, figura.post
         %td= "figura_#{figura.id}"
         %td= image_tag figura.img.url(:thumb)
-        %td= h figura.nombre
-        %td= h figura.descripcion
+        %td= figura.nombre
+        %td= figura.descripcion
         %td= link_to 'Show', [@post,figura]
         %td= link_to 'Edit', edit_post_figura_path(@post,figura)
         %td= link_to 'Destroy', [@post,figura], :confirm => 'Are you sure?', :method => :delete
