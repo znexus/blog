@@ -1,8 +1,6 @@
 class PostsController < ApplicationController
   before_filter :iniciar
-  before_filter :autorizado?, :except => [:show,:index]
-  tab :post
-  
+  before_filter :autorizado?, :except => [:show,:index]  
   def index
     page = params[:page]
     page ||= 1 

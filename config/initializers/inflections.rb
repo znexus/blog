@@ -12,4 +12,6 @@ ActiveSupport::Inflector.inflections do |inflect|
   inflect.singular /([rlnd])es([A-Z]|_|$)/, '\1\2'
   inflect.irregular "post","posts"
   inflect.irregular "user","users"
+  inflect.irregular "tagging","taggings"
+  inflect.irregular "tag","tags"
 end
